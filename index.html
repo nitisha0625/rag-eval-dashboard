@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAG Evaluation Dashboard</title>
+<style>
+:root{font:16px system-ui;color:#172a2c;background:#f1f6f4}
+main{max-width:960px;margin:56px auto;padding:0 20px}
+h1{font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.05em;margin:0}
+p{line-height:1.55}
+table{border-collapse:collapse;width:100%;background:white;margin:24px 0}
+th,td{text-align:left;padding:12px;border-bottom:1px solid #c9d9d3}
+.scroll{overflow-x:auto}
+label,button{display:inline-block;margin:0 16px 12px 0}
+select,button{font:inherit;padding:8px;border:1px solid #78988f;border-radius:6px;background:white}
+button{background:#174d40;color:white;cursor:pointer}
+details{background:white;padding:16px;margin:8px 0;border-radius:8px}
+summary{cursor:pointer;font-weight:650}
+</style>
+<main>
+<h1>RAG Evaluation Dashboard</h1>
+<p>Compare retrieval strategies on 40 labeled questions about a fictional laundry service.</p>
+<button id="run">Run benchmark</button>
+<p id="status" role="status"></p>
+<div class="scroll"><table id="metrics"></table></div>
+<label>Retrieval <select id="method"></select></label>
+<label><input type="checkbox" id="failures" checked> Failed cases only</label>
+<section id="cases" aria-label="Question results"></section>
+</main>
+<script>
+const get = id => document.getElementById(id)
+let report = {}
+const percent = value => (value * 100).toFixed(1) + '%'
+function add(parent, tag, value) {
+  const element = document.createElement(tag)
+  element.textContent = value
+  parent.append(element)
+  return element
+}
+function renderCases() {
+  const section = get('cases')
+  section.replaceChildren()
+  for (const row of report[get('method').value]?.cases ?? []) {
+    if (get('failures').checked && row.pass) continue
+    const card = add(section, 'details', '')
+    add(card, 'summary', (row.pass ? 'Pass · ' : 'Fail · ') + row.question)
+    add(card, 'p', 'Expected evidence: ' + (row.expected ?? 'None'))
+    add(card, 'p', 'Extracted answer: ' + row.answer)
+    const list = add(card, 'ol', '')
+    for (const item of row.evidence) add(list, 'li', item.id + ' (' + item.score + ') · ' + item.text)
+  }
+  if (!section.childElementCount) add(section, 'p', 'No cases match this filter.')
+}
+async function run() {
+  get('run').disabled = true
+  get('status').textContent = 'Running benchmark…'
+  try {
+    const response = await fetch('/api/evaluate')
+    if (!response.ok) throw new Error('Benchmark request failed.')
+    report = await response.json()
+    const table = get('metrics')
+    table.replaceChildren()
+    const header = add(add(table, 'thead', ''), 'tr', '')
+    for (const title of ['Method', 'Top-1 accuracy', 'Hit@3', 'Abstention', 'p95 latency']) {
+      add(header, 'th', title).scope = 'col'
+    }
+    const body = add(table, 'tbody', '')
+    get('method').replaceChildren()
+    for (const [method, values] of Object.entries(report)) {
+      add(get('method'), 'option', method)
+      const row = add(body, 'tr', '')
+      for (const value of [method, percent(values.top1), percent(values.hit3),
+        percent(values.abstention), values.p95_ms + ' ms']) add(row, 'td', value)
+    }
+    get('status').textContent = 'Benchmark complete · 36 answerable and 4 unanswerable questions.'
+    renderCases()
+  } catch (error) {
+    get('status').textContent = error.message
+  } finally {
+    get('run').disabled = false
+  }
+}
+get('run').onclick = run
+get('method').onchange = renderCases
+get('failures').onchange = renderCases
+run()
+</script>
+</html>
