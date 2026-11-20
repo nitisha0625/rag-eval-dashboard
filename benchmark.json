@@ -1,0 +1,1515 @@
+{
+  "Keyword TF-IDF": {
+    "top1": 0.6388888888888888,
+    "hit3": 0.7777777777777778,
+    "abstention": 0.5,
+    "p95_ms": 0.67,
+    "cases": [
+      {
+        "question": "Can I move my pickup appointment?",
+        "expected": "pickup",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Pickup slots can be rescheduled up to two hours before the selected window.",
+        "evidence": [
+          {
+            "id": "pickup",
+            "text": "Pickup slots can be rescheduled up to two hours before the selected window.",
+            "score": 0.262
+          },
+          {
+            "id": "cancellation",
+            "text": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+            "score": 0.22
+          }
+        ],
+        "latency_ms": 0.8066190000022289
+      },
+      {
+        "question": "What is the deadline to change collection time?",
+        "expected": "pickup",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.6689979999805473
+      },
+      {
+        "question": "How much notice is needed to reschedule?",
+        "expected": "pickup",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.3799400000161768
+      },
+      {
+        "question": "When can I change my pickup slot?",
+        "expected": "pickup",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Pickup slots can be rescheduled up to two hours before the selected window.",
+        "evidence": [
+          {
+            "id": "pickup",
+            "text": "Pickup slots can be rescheduled up to two hours before the selected window.",
+            "score": 0.262
+          },
+          {
+            "id": "cancellation",
+            "text": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+            "score": 0.22
+          }
+        ],
+        "latency_ms": 0.5881280000039624
+      },
+      {
+        "question": "How do I report a damaged item?",
+        "expected": "damage",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Report damaged garments within 48 hours of delivery through the order details screen.",
+        "evidence": [
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.379
+          },
+          {
+            "id": "payment",
+            "text": "Payment is captured once the vendor confirms the final item count.",
+            "score": 0.139
+          }
+        ],
+        "latency_ms": 0.41881900000362293
+      },
+      {
+        "question": "What if my shirt comes back torn?",
+        "expected": "damage",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.5427369999893017
+      },
+      {
+        "question": "How long do I have to report garment damage?",
+        "expected": "damage",
+        "pass": false,
+        "hit_at_3": true,
+        "answer": "Ironing is charged per garment. Laundry is charged by weight.",
+        "evidence": [
+          {
+            "id": "ironing",
+            "text": "Ironing is charged per garment. Laundry is charged by weight.",
+            "score": 0.198
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.179
+          }
+        ],
+        "latency_ms": 0.3819269999780772
+      },
+      {
+        "question": "Where do I submit a damage claim?",
+        "expected": "damage",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.5955149999863352
+      },
+      {
+        "question": "When will my card be charged?",
+        "expected": "payment",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "Ironing is charged per garment. Laundry is charged by weight.",
+        "evidence": [
+          {
+            "id": "ironing",
+            "text": "Ironing is charged per garment. Laundry is charged by weight.",
+            "score": 0.561
+          }
+        ],
+        "latency_ms": 0.45248199995739924
+      },
+      {
+        "question": "Does payment happen before counting clothes?",
+        "expected": "payment",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Payment is captured once the vendor confirms the final item count.",
+        "evidence": [
+          {
+            "id": "payment",
+            "text": "Payment is captured once the vendor confirms the final item count.",
+            "score": 0.277
+          }
+        ],
+        "latency_ms": 0.4121160000067903
+      },
+      {
+        "question": "What triggers payment capture?",
+        "expected": "payment",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Payment is captured once the vendor confirms the final item count.",
+        "evidence": [
+          {
+            "id": "payment",
+            "text": "Payment is captured once the vendor confirms the final item count.",
+            "score": 0.277
+          }
+        ],
+        "latency_ms": 0.3916649999951005
+      },
+      {
+        "question": "When is the final charge taken?",
+        "expected": "payment",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Payment is captured once the vendor confirms the final item count.",
+        "evidence": [
+          {
+            "id": "payment",
+            "text": "Payment is captured once the vendor confirms the final item count.",
+            "score": 0.277
+          }
+        ],
+        "latency_ms": 0.35014000002320245
+      },
+      {
+        "question": "How is ironing priced?",
+        "expected": "ironing",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Ironing is charged per garment. Laundry is charged by weight.",
+        "evidence": [
+          {
+            "id": "ironing",
+            "text": "Ironing is charged per garment. Laundry is charged by weight.",
+            "score": 0.28
+          }
+        ],
+        "latency_ms": 0.39237699996874653
+      },
+      {
+        "question": "Do you charge by the kilo for pressing shirts?",
+        "expected": "ironing",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.3501549999782583
+      },
+      {
+        "question": "How do you calculate laundry charges?",
+        "expected": "ironing",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Ironing is charged per garment. Laundry is charged by weight.",
+        "evidence": [
+          {
+            "id": "ironing",
+            "text": "Ironing is charged per garment. Laundry is charged by weight.",
+            "score": 0.237
+          },
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.203
+          }
+        ],
+        "latency_ms": 0.48308699996368887
+      },
+      {
+        "question": "What unit is used to price ironing?",
+        "expected": "ironing",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Ironing is charged per garment. Laundry is charged by weight.",
+        "evidence": [
+          {
+            "id": "ironing",
+            "text": "Ironing is charged per garment. Laundry is charged by weight.",
+            "score": 0.28
+          }
+        ],
+        "latency_ms": 0.35830899997790766
+      },
+      {
+        "question": "Where can I see delivery delays?",
+        "expected": "delivery",
+        "pass": false,
+        "hit_at_3": true,
+        "answer": "Report damaged garments within 48 hours of delivery through the order details screen.",
+        "evidence": [
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.213
+          },
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 0.21
+          }
+        ],
+        "latency_ms": 0.34676500001751265
+      },
+      {
+        "question": "When is my drop-off window confirmed?",
+        "expected": "delivery",
+        "pass": false,
+        "hit_at_3": true,
+        "answer": "Pickup slots can be rescheduled up to two hours before the selected window.",
+        "evidence": [
+          {
+            "id": "pickup",
+            "text": "Pickup slots can be rescheduled up to two hours before the selected window.",
+            "score": 0.219
+          },
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 0.175
+          }
+        ],
+        "latency_ms": 0.5032710000136831
+      },
+      {
+        "question": "What happens if my order runs late?",
+        "expected": "delivery",
+        "pass": false,
+        "hit_at_3": true,
+        "answer": "Download a receipt from the order history after the order is marked delivered.",
+        "evidence": [
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 0.405
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.185
+          },
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 0.182
+          }
+        ],
+        "latency_ms": 0.3634430000261091
+      },
+      {
+        "question": "Where will a delay notification appear?",
+        "expected": "delivery",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+        "evidence": [
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 0.43
+          }
+        ],
+        "latency_ms": 0.441278999971928
+      },
+      {
+        "question": "Can I send dry-clean-only garments?",
+        "expected": "dry-clean",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+        "evidence": [
+          {
+            "id": "dry-clean",
+            "text": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+            "score": 0.404
+          },
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.185
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.097
+          }
+        ],
+        "latency_ms": 0.36281299998108807
+      },
+      {
+        "question": "Which clothes qualify for dry cleaning?",
+        "expected": "dry-clean",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+        "evidence": [
+          {
+            "id": "dry-clean",
+            "text": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+            "score": 0.426
+          },
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.352
+          }
+        ],
+        "latency_ms": 0.3363849999686863
+      },
+      {
+        "question": "What should I check before booking dry cleaning?",
+        "expected": "dry-clean",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+        "evidence": [
+          {
+            "id": "dry-clean",
+            "text": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+            "score": 0.521
+          },
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.253
+          }
+        ],
+        "latency_ms": 0.4208400000038637
+      },
+      {
+        "question": "Can garments marked dry clean only be booked?",
+        "expected": "dry-clean",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+        "evidence": [
+          {
+            "id": "dry-clean",
+            "text": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+            "score": 0.355
+          },
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.163
+          },
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 0.131
+          }
+        ],
+        "latency_ms": 0.3518569999982901
+      },
+      {
+        "question": "When is cancellation free?",
+        "expected": "cancellation",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+        "evidence": [
+          {
+            "id": "cancellation",
+            "text": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+            "score": 0.261
+          }
+        ],
+        "latency_ms": 0.43229300001712545
+      },
+      {
+        "question": "Will I pay if a driver has already been assigned?",
+        "expected": "cancellation",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+        "evidence": [
+          {
+            "id": "cancellation",
+            "text": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+            "score": 0.452
+          }
+        ],
+        "latency_ms": 0.44083600005251355
+      },
+      {
+        "question": "What happens if I cancel after driver assignment?",
+        "expected": "cancellation",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+        "evidence": [
+          {
+            "id": "cancellation",
+            "text": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+            "score": 0.452
+          }
+        ],
+        "latency_ms": 0.3653170000461614
+      },
+      {
+        "question": "Can I cancel an order without a fee?",
+        "expected": "cancellation",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+        "evidence": [
+          {
+            "id": "cancellation",
+            "text": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+            "score": 0.327
+          },
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 0.187
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.085
+          }
+        ],
+        "latency_ms": 0.5851449999454417
+      },
+      {
+        "question": "How do I get a receipt?",
+        "expected": "receipt",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Download a receipt from the order history after the order is marked delivered.",
+        "evidence": [
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 0.276
+          }
+        ],
+        "latency_ms": 0.7448239999803263
+      },
+      {
+        "question": "Where can I download proof of payment?",
+        "expected": "receipt",
+        "pass": false,
+        "hit_at_3": true,
+        "answer": "Payment is captured once the vendor confirms the final item count.",
+        "evidence": [
+          {
+            "id": "payment",
+            "text": "Payment is captured once the vendor confirms the final item count.",
+            "score": 0.196
+          },
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 0.195
+          }
+        ],
+        "latency_ms": 0.40275200001360645
+      },
+      {
+        "question": "When does a receipt become available?",
+        "expected": "receipt",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Download a receipt from the order history after the order is marked delivered.",
+        "evidence": [
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 0.195
+          },
+          {
+            "id": "dry-clean",
+            "text": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+            "score": 0.154
+          }
+        ],
+        "latency_ms": 0.37810599997101235
+      },
+      {
+        "question": "Can I find receipts in order history?",
+        "expected": "receipt",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Download a receipt from the order history after the order is marked delivered.",
+        "evidence": [
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 0.533
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.085
+          },
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 0.084
+          }
+        ],
+        "latency_ms": 0.38728099997342724
+      },
+      {
+        "question": "How should I pack my clothes?",
+        "expected": "packing",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.39072900000292066
+      },
+      {
+        "question": "Do delicate dry-cleaning items go in the same bag?",
+        "expected": "packing",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+        "evidence": [
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.53
+          },
+          {
+            "id": "dry-clean",
+            "text": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+            "score": 0.353
+          }
+        ],
+        "latency_ms": 0.4996499999947446
+      },
+      {
+        "question": "Should the laundry bag be closed?",
+        "expected": "packing",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+        "evidence": [
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.396
+          },
+          {
+            "id": "ironing",
+            "text": "Ironing is charged per garment. Laundry is charged by weight.",
+            "score": 0.121
+          }
+        ],
+        "latency_ms": 0.3741040000022622
+      },
+      {
+        "question": "How do I prepare clothes for collection?",
+        "expected": "packing",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.3888470000106281
+      },
+      {
+        "question": "Do you offer a student discount?",
+        "expected": null,
+        "pass": true,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.35074499999154796
+      },
+      {
+        "question": "Can I ship an order internationally?",
+        "expected": null,
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "Download a receipt from the order history after the order is marked delivered.",
+        "evidence": [
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 0.405
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.185
+          },
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 0.182
+          }
+        ],
+        "latency_ms": 0.35506200003965205
+      },
+      {
+        "question": "Do vendors provide sewing lessons?",
+        "expected": null,
+        "pass": true,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.38612499997725536
+      },
+      {
+        "question": "What is the loyalty program enrollment fee?",
+        "expected": null,
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+        "evidence": [
+          {
+            "id": "cancellation",
+            "text": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+            "score": 0.261
+          }
+        ],
+        "latency_ms": 0.34278999999060034
+      }
+    ]
+  },
+  "Dense LSA": {
+    "top1": 0.5277777777777778,
+    "hit3": 0.75,
+    "abstention": 0.5,
+    "p95_ms": 0.6,
+    "cases": [
+      {
+        "question": "Can I move my pickup appointment?",
+        "expected": "pickup",
+        "pass": false,
+        "hit_at_3": true,
+        "answer": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+        "evidence": [
+          {
+            "id": "cancellation",
+            "text": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+            "score": 0.995
+          },
+          {
+            "id": "pickup",
+            "text": "Pickup slots can be rescheduled up to two hours before the selected window.",
+            "score": 0.993
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.298
+          }
+        ],
+        "latency_ms": 3.1475189999810027
+      },
+      {
+        "question": "What is the deadline to change collection time?",
+        "expected": "pickup",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.7206669999959558
+      },
+      {
+        "question": "How much notice is needed to reschedule?",
+        "expected": "pickup",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.47499299995479305
+      },
+      {
+        "question": "When can I change my pickup slot?",
+        "expected": "pickup",
+        "pass": false,
+        "hit_at_3": true,
+        "answer": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+        "evidence": [
+          {
+            "id": "cancellation",
+            "text": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+            "score": 0.995
+          },
+          {
+            "id": "pickup",
+            "text": "Pickup slots can be rescheduled up to two hours before the selected window.",
+            "score": 0.993
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.298
+          }
+        ],
+        "latency_ms": 0.41907199999968725
+      },
+      {
+        "question": "How do I report a damaged item?",
+        "expected": "damage",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Report damaged garments within 48 hours of delivery through the order details screen.",
+        "evidence": [
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.836
+          },
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 0.74
+          },
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 0.737
+          }
+        ],
+        "latency_ms": 0.42455999999901906
+      },
+      {
+        "question": "What if my shirt comes back torn?",
+        "expected": "damage",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.4361850000123013
+      },
+      {
+        "question": "How long do I have to report garment damage?",
+        "expected": "damage",
+        "pass": false,
+        "hit_at_3": true,
+        "answer": "Ironing is charged per garment. Laundry is charged by weight.",
+        "evidence": [
+          {
+            "id": "ironing",
+            "text": "Ironing is charged per garment. Laundry is charged by weight.",
+            "score": 0.892
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.464
+          },
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 0.387
+          }
+        ],
+        "latency_ms": 0.3865140000129941
+      },
+      {
+        "question": "Where do I submit a damage claim?",
+        "expected": "damage",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.42965699998376294
+      },
+      {
+        "question": "When will my card be charged?",
+        "expected": "payment",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "Ironing is charged per garment. Laundry is charged by weight.",
+        "evidence": [
+          {
+            "id": "ironing",
+            "text": "Ironing is charged per garment. Laundry is charged by weight.",
+            "score": 1.0
+          },
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.162
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.01
+          }
+        ],
+        "latency_ms": 0.42273399998293826
+      },
+      {
+        "question": "Does payment happen before counting clothes?",
+        "expected": "payment",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Payment is captured once the vendor confirms the final item count.",
+        "evidence": [
+          {
+            "id": "payment",
+            "text": "Payment is captured once the vendor confirms the final item count.",
+            "score": 1.0
+          }
+        ],
+        "latency_ms": 0.5231880000451383
+      },
+      {
+        "question": "What triggers payment capture?",
+        "expected": "payment",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Payment is captured once the vendor confirms the final item count.",
+        "evidence": [
+          {
+            "id": "payment",
+            "text": "Payment is captured once the vendor confirms the final item count.",
+            "score": 1.0
+          }
+        ],
+        "latency_ms": 0.40313900001365255
+      },
+      {
+        "question": "When is the final charge taken?",
+        "expected": "payment",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Payment is captured once the vendor confirms the final item count.",
+        "evidence": [
+          {
+            "id": "payment",
+            "text": "Payment is captured once the vendor confirms the final item count.",
+            "score": 1.0
+          }
+        ],
+        "latency_ms": 0.4601919999913662
+      },
+      {
+        "question": "How is ironing priced?",
+        "expected": "ironing",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Ironing is charged per garment. Laundry is charged by weight.",
+        "evidence": [
+          {
+            "id": "ironing",
+            "text": "Ironing is charged per garment. Laundry is charged by weight.",
+            "score": 1.0
+          },
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.162
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.01
+          }
+        ],
+        "latency_ms": 0.3924399999846173
+      },
+      {
+        "question": "Do you charge by the kilo for pressing shirts?",
+        "expected": "ironing",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.5097789999695124
+      },
+      {
+        "question": "How do you calculate laundry charges?",
+        "expected": "ironing",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Ironing is charged per garment. Laundry is charged by weight.",
+        "evidence": [
+          {
+            "id": "ironing",
+            "text": "Ironing is charged per garment. Laundry is charged by weight.",
+            "score": 0.904
+          },
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.593
+          },
+          {
+            "id": "dry-clean",
+            "text": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+            "score": 0.306
+          }
+        ],
+        "latency_ms": 0.39695200001688136
+      },
+      {
+        "question": "What unit is used to price ironing?",
+        "expected": "ironing",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Ironing is charged per garment. Laundry is charged by weight.",
+        "evidence": [
+          {
+            "id": "ironing",
+            "text": "Ironing is charged per garment. Laundry is charged by weight.",
+            "score": 1.0
+          },
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.162
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.01
+          }
+        ],
+        "latency_ms": 0.38224799999397874
+      },
+      {
+        "question": "Where can I see delivery delays?",
+        "expected": "delivery",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+        "evidence": [
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 0.974
+          },
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 0.972
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.967
+          }
+        ],
+        "latency_ms": 0.5562549999922339
+      },
+      {
+        "question": "When is my drop-off window confirmed?",
+        "expected": "delivery",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "Pickup slots can be rescheduled up to two hours before the selected window.",
+        "evidence": [
+          {
+            "id": "pickup",
+            "text": "Pickup slots can be rescheduled up to two hours before the selected window.",
+            "score": 0.846
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.819
+          },
+          {
+            "id": "cancellation",
+            "text": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+            "score": 0.713
+          }
+        ],
+        "latency_ms": 0.39938300000130766
+      },
+      {
+        "question": "What happens if my order runs late?",
+        "expected": "delivery",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+        "evidence": [
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 0.996
+          },
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 0.996
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.921
+          }
+        ],
+        "latency_ms": 0.4161800000019866
+      },
+      {
+        "question": "Where will a delay notification appear?",
+        "expected": "delivery",
+        "pass": false,
+        "hit_at_3": true,
+        "answer": "Download a receipt from the order history after the order is marked delivered.",
+        "evidence": [
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 1.0
+          },
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 0.999
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.867
+          }
+        ],
+        "latency_ms": 0.42101100001445957
+      },
+      {
+        "question": "Can I send dry-clean-only garments?",
+        "expected": "dry-clean",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+        "evidence": [
+          {
+            "id": "dry-clean",
+            "text": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+            "score": 0.986
+          },
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.965
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.231
+          }
+        ],
+        "latency_ms": 0.42775300005359895
+      },
+      {
+        "question": "Which clothes qualify for dry cleaning?",
+        "expected": "dry-clean",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+        "evidence": [
+          {
+            "id": "dry-clean",
+            "text": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+            "score": 0.993
+          },
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.975
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.11
+          }
+        ],
+        "latency_ms": 0.4058239999835678
+      },
+      {
+        "question": "What should I check before booking dry cleaning?",
+        "expected": "dry-clean",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+        "evidence": [
+          {
+            "id": "dry-clean",
+            "text": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+            "score": 0.998
+          },
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.963
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.096
+          }
+        ],
+        "latency_ms": 0.48894400003973715
+      },
+      {
+        "question": "Can garments marked dry clean only be booked?",
+        "expected": "dry-clean",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+        "evidence": [
+          {
+            "id": "dry-clean",
+            "text": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+            "score": 0.94
+          },
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.936
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.398
+          }
+        ],
+        "latency_ms": 0.3883580000092479
+      },
+      {
+        "question": "When is cancellation free?",
+        "expected": "cancellation",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+        "evidence": [
+          {
+            "id": "cancellation",
+            "text": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+            "score": 1.0
+          },
+          {
+            "id": "pickup",
+            "text": "Pickup slots can be rescheduled up to two hours before the selected window.",
+            "score": 0.974
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.189
+          }
+        ],
+        "latency_ms": 0.39312199999130826
+      },
+      {
+        "question": "Will I pay if a driver has already been assigned?",
+        "expected": "cancellation",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+        "evidence": [
+          {
+            "id": "cancellation",
+            "text": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+            "score": 1.0
+          },
+          {
+            "id": "pickup",
+            "text": "Pickup slots can be rescheduled up to two hours before the selected window.",
+            "score": 0.974
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.189
+          }
+        ],
+        "latency_ms": 0.4314239999985148
+      },
+      {
+        "question": "What happens if I cancel after driver assignment?",
+        "expected": "cancellation",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+        "evidence": [
+          {
+            "id": "cancellation",
+            "text": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+            "score": 1.0
+          },
+          {
+            "id": "pickup",
+            "text": "Pickup slots can be rescheduled up to two hours before the selected window.",
+            "score": 0.974
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.189
+          }
+        ],
+        "latency_ms": 0.37268699998094235
+      },
+      {
+        "question": "Can I cancel an order without a fee?",
+        "expected": "cancellation",
+        "pass": false,
+        "hit_at_3": true,
+        "answer": "Report damaged garments within 48 hours of delivery through the order details screen.",
+        "evidence": [
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.834
+          },
+          {
+            "id": "pickup",
+            "text": "Pickup slots can be rescheduled up to two hours before the selected window.",
+            "score": 0.834
+          },
+          {
+            "id": "cancellation",
+            "text": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+            "score": 0.696
+          }
+        ],
+        "latency_ms": 0.4667450000397366
+      },
+      {
+        "question": "How do I get a receipt?",
+        "expected": "receipt",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Download a receipt from the order history after the order is marked delivered.",
+        "evidence": [
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 0.999
+          },
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 0.999
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.864
+          }
+        ],
+        "latency_ms": 0.3928179999661552
+      },
+      {
+        "question": "Where can I download proof of payment?",
+        "expected": "receipt",
+        "pass": false,
+        "hit_at_3": true,
+        "answer": "Payment is captured once the vendor confirms the final item count.",
+        "evidence": [
+          {
+            "id": "payment",
+            "text": "Payment is captured once the vendor confirms the final item count.",
+            "score": 0.88
+          },
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 0.475
+          },
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 0.475
+          }
+        ],
+        "latency_ms": 0.3722390000007181
+      },
+      {
+        "question": "When does a receipt become available?",
+        "expected": "receipt",
+        "pass": false,
+        "hit_at_3": true,
+        "answer": "Report damaged garments within 48 hours of delivery through the order details screen.",
+        "evidence": [
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.698
+          },
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 0.683
+          },
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 0.683
+          }
+        ],
+        "latency_ms": 0.5889170000159538
+      },
+      {
+        "question": "Can I find receipts in order history?",
+        "expected": "receipt",
+        "pass": false,
+        "hit_at_3": true,
+        "answer": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+        "evidence": [
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 1.0
+          },
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 1.0
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.894
+          }
+        ],
+        "latency_ms": 0.44825200001241683
+      },
+      {
+        "question": "How should I pack my clothes?",
+        "expected": "packing",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.494456000012633
+      },
+      {
+        "question": "Do delicate dry-cleaning items go in the same bag?",
+        "expected": "packing",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+        "evidence": [
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.986
+          },
+          {
+            "id": "dry-clean",
+            "text": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+            "score": 0.985
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.126
+          }
+        ],
+        "latency_ms": 0.4317820000210304
+      },
+      {
+        "question": "Should the laundry bag be closed?",
+        "expected": "packing",
+        "pass": true,
+        "hit_at_3": true,
+        "answer": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+        "evidence": [
+          {
+            "id": "packing",
+            "text": "Place garments in a closed bag and keep dry-cleaning items separate from regular laundry.",
+            "score": 0.92
+          },
+          {
+            "id": "dry-clean",
+            "text": "Dry cleaning is available for items labeled dry clean only. Check the care label before booking.",
+            "score": 0.745
+          },
+          {
+            "id": "ironing",
+            "text": "Ironing is charged per garment. Laundry is charged by weight.",
+            "score": 0.563
+          }
+        ],
+        "latency_ms": 0.45681099999228536
+      },
+      {
+        "question": "How do I prepare clothes for collection?",
+        "expected": "packing",
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.3703040000004876
+      },
+      {
+        "question": "Do you offer a student discount?",
+        "expected": null,
+        "pass": true,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.4007690000094044
+      },
+      {
+        "question": "Can I ship an order internationally?",
+        "expected": null,
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+        "evidence": [
+          {
+            "id": "delivery",
+            "text": "Delivery windows are confirmed at checkout. A delay notification appears on the order timeline.",
+            "score": 0.996
+          },
+          {
+            "id": "receipt",
+            "text": "Download a receipt from the order history after the order is marked delivered.",
+            "score": 0.996
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.921
+          }
+        ],
+        "latency_ms": 0.40472799997814946
+      },
+      {
+        "question": "Do vendors provide sewing lessons?",
+        "expected": null,
+        "pass": true,
+        "hit_at_3": false,
+        "answer": "No evidence retrieved.",
+        "evidence": [],
+        "latency_ms": 0.3724580000152855
+      },
+      {
+        "question": "What is the loyalty program enrollment fee?",
+        "expected": null,
+        "pass": false,
+        "hit_at_3": false,
+        "answer": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+        "evidence": [
+          {
+            "id": "cancellation",
+            "text": "Cancel for free before a driver is assigned. After assignment, a pickup fee applies.",
+            "score": 1.0
+          },
+          {
+            "id": "pickup",
+            "text": "Pickup slots can be rescheduled up to two hours before the selected window.",
+            "score": 0.974
+          },
+          {
+            "id": "damage",
+            "text": "Report damaged garments within 48 hours of delivery through the order details screen.",
+            "score": 0.189
+          }
+        ],
+        "latency_ms": 0.41474100004279535
+      }
+    ]
+  }
+}
